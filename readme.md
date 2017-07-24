@@ -3,17 +3,17 @@
 ### 用法
 
 ```
-composer require alezh/alipay
+composer require alezh/laravel-ip2region
 ```
 
 或者在你的 `composer.json` 的 require 部分中添加:
 ```json
- "alezh/alipay": "~1.0"
+ "alezh/laravel-ip2region": "~1.0"
 ```
-
-下载完毕之后,直接配置 `config/app.php` 的 `providers`:
 
 ```php
-\Alezh\Alipay\AopClientProvider::class,
+\Alezh\laravelIp2region\AopClientProvider::class,
 ```
-$ php artisan vendor:publish --provider="Alezh\Alipay\AopClientProvider"
+```php
+'Ip2region' => Alezh\laravelIp2region\Facades\IpToregionFacades::class
+```
