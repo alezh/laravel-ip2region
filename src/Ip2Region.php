@@ -98,11 +98,15 @@ class Ip2Region
         //get the data
         $dataLen = (($dataPtr >> 24) & 0xFF);
         $dataPtr = ($dataPtr & 0x00FFFFFF);
+        $region  = explode('|',substr($this->dbBinStr, $dataPtr + 4, $dataLen - 4));
 
-        return array(
-            'city_id' => self::getLong($this->dbBinStr, $dataPtr),
-            'region'  => substr($this->dbBinStr, $dataPtr + 4, $dataLen - 4)
-        );
+        return (object)[
+            'country'=>isset($region[0])?$region[0]:'',
+            'region'=>isset($region[1])?$region[1]:'',
+            'province'=>isset($region[2])?$region[2]:'',
+            'city' =>isset($region[3])?$region[3]:'',
+            'operator'=>isset($region[4])?$region[4]:''
+        ];
     }
 
     /**
