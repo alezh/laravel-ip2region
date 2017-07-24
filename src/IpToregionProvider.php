@@ -23,7 +23,6 @@ class IpToregionProvider extends ServiceProvider
      */
     public function register()
     {
-        // $config = config('WxPay');
         $this->app->singleton("ip2region", function ()  {
             return new Ip2Region(__DIR__ . '/Data/ip2region.db');
         });

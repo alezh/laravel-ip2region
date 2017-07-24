@@ -12,7 +12,7 @@ composer require alezh/laravel-ip2region
 ```
 
 ```php
-\Alezh\laravelIp2region\AopClientProvider::class,
+\Alezh\laravelIp2region\IpToregionProvider::class,
 ```
 ```php
 'Ip2region' => Alezh\laravelIp2region\Facades\IpToregionFacades::class
