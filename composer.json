@@ -1,0 +1,24 @@
+{
+    "name": "alezh/laravel-ip2region",
+    "description": "ip2region for Laravel 5",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "alezh",
+            "email": "alezh.liu@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alezh\\laravelIp2region\\": "src/"
+        }
+    }
+}
