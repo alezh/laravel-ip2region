@@ -1,5 +1,7 @@
 ### ip2region for Laravel 5
 
+### ip2region v1.2.4
+
 ### 用法
 
 ```
